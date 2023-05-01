@@ -12,6 +12,7 @@ import { ConstructionComponent } from './pages/construction/construction.compone
 import { TecnologyComponent } from './pages/tecnology/tecnology.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { rootRouterConfig } from './app.routes';
+import { CarouselComponent } from './elements/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { rootRouterConfig } from './app.routes';
     ProductsComponent,
     ConstructionComponent,
     TecnologyComponent,
-    ContactComponent
+    ContactComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

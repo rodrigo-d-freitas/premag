@@ -8,15 +8,33 @@ $prefix : premag;
 @include layout.margin('.premag-margin-top-', 'margin-top');
 @include layout.margin('.premag-margin-left-', 'margin-left');
 @include layout.margin('.premag-margin-bottom-', 'margin-bottom');
+@include layout.margin('.premag-margin-right-', 'margin-right');
 
 @include layout.padding('.premag-padding-top-', 'padding-top');
 @include layout.padding('.premag-padding-left-', 'padding-left');
 @include layout.padding('.premag-padding-bottom-', 'padding-bottom');
+@include layout.padding('.premag-padding-right-', 'padding-right');
+
+body {
+    font-family: 'Raleway', sans-serif;
+
+}
+.portfolio div{
+    font-size: 64px;
+}
+
+.obras,
+.contato,
+.products {
+    margin-top: -16px;
+}
 
 .#{$prefix} {
     &-footer {
         height: 425px;
     }
+    &-primary-font { font-family: 'Raleway', sans-serif; }
+    &-secondary-font { font-family: 'Kanit', sans-serif; }
     &-ul {
         list-style: none;
         padding-left: 0;
@@ -27,10 +45,27 @@ $prefix : premag;
             margin-top: -8px;
             margin-left: 0;
 
+            &-text { margin-top: -35px; }
+
+
+            &-05 { width: 5%; }
             &-25 { width: 25%; }
             &-50 { width: 50%; }
             &-75 { width: 75%; }
             &-100 { width: 100%; }
+
+            &-h-05 { height: 5%; }
+            &-h-25 { height: 25%; }
+            &-h-50 { height: 50%; }
+            &-h-75 { height: 75%; }
+            &-h-100 { height: 100%; }
+
+            &-90 { 
+                height: 45px;
+                width: 4px;
+                margin-top: 0;
+                margin-left: 0;
+            }
 
         }
     }
@@ -40,5 +75,107 @@ $prefix : premag;
         &-3x { height: 12px; }
         &-4x { height: 16px; }
         &-5x { height: 20px; }
+    }
+    &-font-title { 
+        font-family: 'Kanit', sans-serif;
+        font-size: 96px;
+        line-height: 102px;
+        font-weight: 800;
+    }
+    &-font{
+        &-14 { font-size: 14px; line-height: 20px;}
+        &-18 { font-size: 18px; line-height: 24px;}
+        &-24 { font-size: 24px; line-height: 30px;}
+        &-36 { font-size: 36px; line-height: 40px;}
+        &-48 { font-size: 48px; line-height: 54px;}
+
+        &-weight {
+            &-600 { font-weight: 600;}
+            &-800 { font-weight: 800;}
+        }
+    }
+    &-quote {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    &-bg-pontes{ background: url(assets/images/bg-pontes.png) no-repeat center center; }
+    &-bg-viadutos{ background: url(assets/images/bg-viadutos.png) no-repeat center center; }
+    &-bg-passarelas { background: url(assets/images/bg-passarelas.png) no-repeat center center; }
+
+    &-portfolio-item { 
+        height: 150px;
+
+    }
+    &-banner {
+        background: url(assets/images/imagem_capa.png) no-repeat center center;
+        height: 417px;
+    }
+
+    &-numbers-itens {
+        font-size: 32px;
+    }
+
+    &-fabrica{
+        &-banner {
+            background: url(assets/images/capa-fabrica.png) no-repeat center center;
+            background-size: cover;
+            height: 504px;
+        }
+        
+    }
+
+    &-product {
+        &-banner {
+            background: url(assets/images/capa-produtos.png) no-repeat center center;
+            background-size: cover;
+            height: 504px;
+        }
+
+        &-content {
+            .premag-product-container {
+                margin-left: -225px;
+
+            }
+            .premag-page-title { margin-top: 445px; }
+        }
+    }
+
+    &-page{
+        &-title {
+            font-size: 75px;
+            transform: rotate(270deg);
+            font-weight: 800;
+            margin-top: 190px;
+        }
+        &-subtitle {
+            font-weight: 600;
+        }
+    }
+
+    &-obras{
+        &-banner {
+            background: url(assets/images/capa-obras.png) no-repeat center center;
+            background-size: cover;
+            height: 460px;
+        }
+
+        &-content {
+            .premag-obras-container {
+                margin-left: -190px;
+
+                .card { height: 675px; }
+                .card-title { font-weight: 700; }
+            }
+            .premag-page-title { margin-top: 375px; }
+        }
+
+    }
+
+    &-contato {
+        &-banner {
+            background: url(assets/images/capa-contato.png) no-repeat center center;
+            background-size: cover;
+            height: 504px;
+        }
     }
 }
