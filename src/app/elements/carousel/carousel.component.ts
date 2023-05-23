@@ -1,5 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
+import { MdbCarouselComponent } from 'mdb-angular-ui-kit/carousel';
 
 @Component({
   selector: 'app-carousel',
@@ -9,6 +10,9 @@ import { Subscription, timer } from 'rxjs';
 export class CarouselComponent implements OnInit, OnDestroy {
 
   timerSubs! : Subscription;
+  images : any[] = [];
+
+
 
   @Input() imagens : string[] = [];
 
@@ -21,7 +25,13 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.iniciarTimer();
+    this.images = [
+      '../../../assets/images/br-petrobras.svg',
+      '../../../assets/images/embratel-1.svg',
+      '../../../assets/images/light.svg'
+    ]
+
+    this.slides = this.chunk(this.cards, 4);
       
   }
 
@@ -44,6 +54,50 @@ export class CarouselComponent implements OnInit, OnDestroy {
   ativarImagem(index : number): void {
     this.indexImagemAtiva = index;
     this.iniciarTimer();
+  }
+
+  cards = [
+    {
+      img: '../../../assets/images/dnit.png'
+    },
+    {
+      img: '../../../assets/images/embratel-1.svg'
+    },
+    {
+      img: '../../../assets/images/metro-rio.svg'
+    },
+    {
+      img: '../../../assets/images/light.svg'
+    },
+    {
+      img: '../../../assets/images/br-petrobras.svg'
+    },
+    {
+      img: '../../../assets/images/ufrj.svg'
+    },
+    {
+      img: '../../../assets/images/logo-mage.png'
+    },
+    {
+      img: '../../../assets/images/marica.png'
+    },
+    {
+      img: '../../../assets/images/globo.svg'
+    },
+    {
+      img: '../../../assets/images/fiat.svg'
+    },
+    {
+      img: '../../../assets/images/ccr.svg'
+    },
+  ];
+  slides: any = [[]];
+  chunk(arr: any, chunkSize: any) {
+    let R = [];
+    for (let i = 0, len = arr.length; i < len; i += chunkSize) {
+      R.push(arr.slice(i, i + chunkSize));
+    }
+    return R;
   }
 
 }

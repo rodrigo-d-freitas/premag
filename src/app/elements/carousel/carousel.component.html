@@ -1,4 +1,4 @@
-<div
+<!-- <div
   class="item"
   [style.backgroundImage]="
     'url(' + imagens[indexImagemAtiva] + ')'
@@ -7,10 +7,22 @@
     
 </div>
 
-<!-- Botões de controle -->
 <div class="botoes-controle">
     <button
       *ngFor="let imagem of imagens; index as i"
       [class.ativo]="i === indexImagemAtiva"
       (click)="pararTimer(); ativarImagem(i)"></button>
-  </div>
+  </div> -->
+
+  <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'" [animation]="'slide'">
+    <mdb-carousel-item *ngFor="let item of slides; let i = index">
+      <div class="row">
+        <div class="col-md-3" [ngClass]="{'d-none d-md-block': cardIndex !== 0}"
+              *ngFor="let card of item; let cardIndex = index">
+          <div class="my-1 premag-carousel d-flex flex-column justify-content-center">
+            <img [src]="card.img" alt="Card image cap">
+          </div>
+        </div>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>

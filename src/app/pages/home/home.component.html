@@ -8,7 +8,7 @@
                     <p>Já são <span class="premag-color-05">mais de 2000 obras executadas</span> até o momento, promovendo a infraestrutura do País nos estados do Rio de Janeiro, Espírito Santo, Minas Gerais, São Paulo, Bahia e Mato Grosso, para entidades públicas e privadas. Sempre incorporando a experiência, os conhecimentos e colaborações dos grandes profissionais da Engenharia que fizeram parte da nossa história desde a sua origem.         </p>
                 </div>
                 <div class="col d-flex flex-row justify-content-center align-items-center">
-                    <img src="../../../assets/images/logo-premag-3.png" alt="Logo da Premag">
+                    <img src="../../../assets/images/logo-premag-2.png" alt="Logo da Premag">
                 </div>
             </div>
         </div>
@@ -16,10 +16,10 @@
     <div class="mission background-color-c9">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <h2 class="premag-font-title color-c8 text-uppercase premag-margin-top-120 premag-margin-bottom-120">Missão</h2>
+                <div class="col-12 col-lg-6">
+                    <h2 class="premag-font-title color-c8 text-uppercase premag-margin-top-120 premag-margin-bottom-120 premag-title-mission">Missão</h2>
                 </div>
-                <div class="col d-flex flex-row justify-content-center align-items-center">
+                <div class="col-12 col-lg-6 d-flex flex-row justify-content-center align-items-center">
                     <p class="color-c4 fst-italic premag-quote">“Garantir a qualidade de seus serviços e produtos, como premissa básica, proporcionando aos seus contratantes, usuários e a todos envolvidos no processo produtivo o mais alto grau de confiabilidade no seu sistema de construções, de forma a ultrapassar as expectativas usuais”</p>
                 </div>
             </div>
@@ -27,38 +27,39 @@
     </div>
     <div class="portfolio premag-secondary-font">
         <div class="row">
-            <div class="col text-uppercase premag-bg-pontes premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Pontes</div>
-            <div class="col background-color-c12 text-uppercase premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Galerias</div>
+            <div class="col-12 col-lg-6 text-uppercase premag-bg-pontes premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Pontes</div>
+            <div class="col-12 col-lg-6 background-color-c12 text-uppercase premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Galerias</div>
+        </div>
+        <div class="row premag-phone-middle">
+            <div class="col-12 col-lg-6 background-color-c12 text-uppercase premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Edificações</div>
+            <div class="col-12 col-lg-6 text-uppercase premag-bg-viadutos premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Viadutos</div>
         </div>
         <div class="row">
-            <div class="col background-color-c12 text-uppercase premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Edificações</div>
-            <div class="col text-uppercase premag-bg-viadutos premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Viadutos</div>
-        </div>
-        <div class="row">
-            <div class="col text-uppercase premag-bg-passarelas premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Passarelas</div>
-            <div class="col background-color-c12 text-uppercase premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Mobiliário</div>
+            <div class="col-12 col-lg-6 text-uppercase premag-bg-passarelas premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Passarelas</div>
+            <div class="col-12 col-lg-6 background-color-c12 text-uppercase premag-portfolio-item color-c2 fw-bold d-flex justify-content-center align-items-center">Mobiliário</div>
         </div>
     </div>
     <div class="numbers">
         <div class="container">
             <div class="d-flex flex-row align-items-center justify-content-between premag-margin-top-80 premag-margin-bottom-80 premag-secondary-font">
                 <div class="premag-secondary-font d-flex flex-column align-items-center justify-content-center fw-bold premag-numbers-itens color-c11">
-                    <p>732</p>
+                    <p id="contadorPonte"><ngx-animated-counter [params]="paramsPontes"></ngx-animated-counter></p>
                     <p>Pontes</p>
                 </div>
                 <div class="premag-secondary-font d-flex flex-column align-items-center justify-content-center fw-bold premag-numbers-itens color-c11">
-                    <p>87</p>
+                    <p><ngx-animated-counter [params]="paramsViadutos"></ngx-animated-counter></p>
                     <p>Viadutos</p>
                 </div>
                 <div class="premag-secondary-font d-flex flex-column align-items-center justify-content-center fw-bold premag-numbers-itens color-c11">
-                    <p>247</p>
+                    <p><ngx-animated-counter [params]="paramsPassarelas"></ngx-animated-counter></p>
                     <p>Passarelas</p>
                 </div>
                 <div class="premag-secondary-font d-flex flex-column align-items-center justify-content-center fw-bold premag-numbers-itens color-c11">
-                    <p>1393</p>
+                    <p><ngx-animated-counter [params]="paramsObras"></ngx-animated-counter></p>
                     <p>Obras Concluídas</p>
                 </div>
             </div>
         </div>
     </div>
+    
 </div>

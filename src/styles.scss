@@ -2,6 +2,13 @@
 @use "sass/_layout.scss" as layout;
 @import url(./sass/_colors.scss);
 
+// Font Awesome
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../node_modules/mdb-angular-ui-kit/assets/scss/mdb.scss";
+
 
 $prefix : premag;
 
@@ -23,11 +30,20 @@ body {
     font-size: 64px;
 }
 
+.is-active{
+    color: #FEC32B !important;
+    font-weight: 600;
+}
+
 .obras,
 .contato,
-.products {
-    margin-top: -16px;
+.products,
+.tecnologia,
+.factory,
+.home {
+    margin-top: 58px;
 }
+
 
 .#{$prefix} {
     &-footer {
@@ -35,9 +51,20 @@ body {
     }
     &-primary-font { font-family: 'Raleway', sans-serif; }
     &-secondary-font { font-family: 'Kanit', sans-serif; }
+    &-hero-image {
+        width: 100%;
+        margin-left: -16px;
+    }
     &-ul {
         list-style: none;
         padding-left: 0;
+    }
+    &-header {
+        .navbar-brand {
+            img {
+                width: 88px;
+            }
+        }
     }
     &-deco {
         &-retangulo {
@@ -85,6 +112,7 @@ body {
     &-font{
         &-14 { font-size: 14px; line-height: 20px;}
         &-18 { font-size: 18px; line-height: 24px;}
+        &-20 { font-size: 20px; line-height: 26px;}
         &-24 { font-size: 24px; line-height: 30px;}
         &-36 { font-size: 36px; line-height: 40px;}
         &-48 { font-size: 48px; line-height: 54px;}
@@ -109,6 +137,7 @@ body {
     &-banner {
         background: url(assets/images/imagem_capa.png) no-repeat center center;
         height: 417px;
+        background-size: cover;
     }
 
     &-numbers-itens {
@@ -133,10 +162,16 @@ body {
 
         &-content {
             .premag-product-container {
-                margin-left: -225px;
+                margin-left: -310px;
 
             }
-            .premag-page-title { margin-top: 445px; }
+            .premag-page-title { margin-top: 475px; }
+            .premag-product-item {
+                .col-3 { padding-left: 0; padding-right: 0;}
+                .col-3-l { margin-right: -6px;}
+                .col-9-r { border-top-right-radius: 8px; border-bottom-right-radius: 8px;}
+                .col-9-l { border-top-left-radius: 8px; border-bottom-left-radius: 8px;}
+            }
         }
     }
 
@@ -173,9 +208,207 @@ body {
 
     &-contato {
         &-banner {
-            background: url(assets/images/capa-contato.png) no-repeat center center;
+            background: url(assets/images/capa-fabrica.png) no-repeat center center;
             background-size: cover;
             height: 504px;
         }
+    }
+    &-tecnologia {
+        &-banner {
+            background: url(assets/images/capa-tecnologia.png) no-repeat center center;
+            background-size: cover;
+            height: 500px;
+        }
+        &-content {
+            .premag-tecnologia-container {
+                margin-left: -60px;
+            }
+            .premag-page-title { margin-top: 375px; }
+        }
+    }
+
+    &-carousel {
+        height: 100%;
+    }
+
+    
+}
+
+@media only screen and (max-width: 576px) {
+    
+    .premag {
+
+        &-header {
+            .navbar {
+                background-color: #B3B3B3 !important;
+            }
+        }
+
+        &-banner{
+            height: fit-content;
+            padding-bottom: 40px;
+
+            .container .row {
+                flex-direction: column-reverse;
+                display: flex;
+                padding-top: 40px;
+            }
+        }
+
+        &-portfolio{
+            &-item{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-color: #EDB31D !important;
+            }
+        }
+
+        &-footer {
+            height: auto;
+        }
+
+        &-links-rapidos {
+            margin-top: 40px;
+            margin-left: 0;
+            margin-bottom: 40px;
+        }
+        &-title-mission {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        &-phone-middle {
+            flex-direction: column-reverse;
+            display: flex;
+        }
+
+        &-fabrica {
+            &-banner {
+                height: fit-content;
+
+                iframe {
+                    width: 320px !important;
+                    height: 160px !important;
+                }
+            }
+
+            &-content {
+                .premag-page-title { display: none !important; }
+                .premag-text { 
+                    font-size: 14px; 
+                    line-height: 20px;
+                    padding-right: 30px;
+                    text-align: justify; 
+                }
+                .premag-deco-w,
+                .premag-deco-h {
+                    display: none;
+                }
+                .premag-deco-retangulo-text { margin-top: 0; }
+                .premag-fabrica-imagens{
+                    margin-left: 20px;
+                    margin-top: -40px;
+
+                    .premag-fabrica-segunda-imagem {
+                        margin-left: 40px;
+                        margin-top: -60px
+                    }
+                    .premag-fabrica-terceira-imagem {
+                        margin-left: 80px;
+                        margin-top: -60px
+                    }
+                }
+            }
+        }
+        &-product {
+            &-banner {
+                background: url(assets/images/capa-produtos.png) no-repeat -500px;
+            }
+            &-content { 
+                .premag-page-title { display: none !important; }
+                .premag-product-container { margin-left: 0; }
+
+                .premag-product-item{
+
+                    .col-9-r {
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                        width: 320px;
+                        margin: -6px auto 0 12px;
+                    }
+
+                    .col-9-l {
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                        width: 318px;
+                        margin: 0 auto -9px 12px;
+                        z-index: 9;
+                    }
+                    .col-3-l img,
+                    .col-3-r img {
+                        border-radius: 8px;;
+                    }
+                }
+            }
+        }
+    }
+
+    .obras {
+        .premag-page-title { display: none !important; }
+        .premag-obras-content .premag-obras-container {
+            margin-left: 0;
+
+            .card {
+                height: auto;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .tecnologia {
+        .premag-page-title, .premag-deco-retangulo-h-100 { display: none !important; }
+        .premag-tecnologia-content .premag-tecnologia-container{
+            margin-left: 0;
+            padding-top: 40px;
+
+            .premag-tecnologia-text {
+                padding: 0 20px;
+            }
+
+            img { 
+                width:100%; 
+                margin-left: 0;
+                margin-top: 40px;
+                margin-bottom: 40px; 
+            }
+        }
+        .premag-no-padding-col {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .contato{
+        .premag-page-title { display: none !important; }
+
+        iframe {
+            width: 320px !important;
+            height: 160px !important;
+        }
+    }
+
+    .portfolio{
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #363636 !important;
+
+        div {
+            font-size: 40px;
+            margin-right: 0;
+            margin-left: 0;
+            
+        }
+    }
+    .numbers .container > div {
+        flex-direction: column !important;
     }
 }

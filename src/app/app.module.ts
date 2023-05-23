@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './elements/header/header.component';
@@ -13,6 +14,7 @@ import { TecnologyComponent } from './pages/tecnology/tecnology.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { rootRouterConfig } from './app.routes';
 import { CarouselComponent } from './elements/carousel/carousel.component';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,17 @@ import { CarouselComponent } from './elements/carousel/carousel.component';
   ],
   imports: [
     BrowserModule,
-    [RouterModule.forRoot(rootRouterConfig)]
+    MdbCarouselModule,
+    [RouterModule.forRoot(rootRouterConfig),
+    NgxAnimatedCounterModule]
   ],
   exports: [
     RouterModule
   ],
   providers: [],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

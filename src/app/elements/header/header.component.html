@@ -1,27 +1,30 @@
 <div class="premag-header background-color-c14" id="premag-header">
     <div class="container">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar fixed-top background-color-c14">
             <div class="container-fluid">
-              <a class="navbar-brand" href="home"><img src="../../../assets/images/logo-premag 2.png" alt="Logo da Premag"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-brand mb-0 h1"><a href="home"><img src="../../../assets/images/logo-premag-2.png" alt="Logo da Premag"></a></span>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="collapse()">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <div class="navbar-collapse justify-content-end" [ngClass]="{'collapse':menucollapse}" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link color-c3" href="fabrica">A Fábrica</a>
+                    <a class="nav-link color-c3" routerLink="/home" routerLinkActive="is-active">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link color-c3" href="produtos-e-servicos">Produtos e Serviços</a>
+                    <a class="nav-link color-c3" routerLink="/fabrica" routerLinkActive="is-active">A Fábrica</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link color-c3" href="principais-obras">Principais Obras</a>
+                    <a class="nav-link color-c3" routerLink="/produtos-e-servicos" routerLinkActive="is-active">Produtos e Serviços</a>
+                  </li>
+                  <li class="nav-item"> 
+                    <a class="nav-link color-c3" routerLink="/principais-obras" routerLinkActive="is-active">Principais Obras</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link color-c3" href="tecnologia">Tecnologia</a>
+                    <a class="nav-link color-c3" routerLink="/tecnologia" routerLinkActive="is-active">Tecnologia</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link color-c3" href="contato">contato</a>
+                    <a class="nav-link color-c3" routerLink="/contato" routerLinkActive="is-active">Contato</a>
                   </li>
                 </ul>
               </div>
