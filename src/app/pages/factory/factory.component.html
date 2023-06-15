@@ -33,24 +33,7 @@
     </div>
     <div class="numbers">
         <div class="container">
-            <div class="d-flex flex-row align-items-center justify-content-between premag-margin-top-80 premag-margin-bottom-80 premag-secondary-font">
-                <div class="premag-secondary-font d-flex flex-column align-items-center justify-content-center fw-bold premag-numbers-itens color-c11">
-                    <p id="contadorPonte"><ngx-animated-counter [params]="paramsPontes"></ngx-animated-counter></p>
-                    <p>Pontes</p>
-                </div>
-                <div class="premag-secondary-font d-flex flex-column align-items-center justify-content-center fw-bold premag-numbers-itens color-c11">
-                    <p><ngx-animated-counter [params]="paramsViadutos"></ngx-animated-counter></p>
-                    <p>Viadutos</p>
-                </div>
-                <div class="premag-secondary-font d-flex flex-column align-items-center justify-content-center fw-bold premag-numbers-itens color-c11">
-                    <p><ngx-animated-counter [params]="paramsPassarelas"></ngx-animated-counter></p>
-                    <p>Passarelas</p>
-                </div>
-                <div class="premag-secondary-font d-flex flex-column align-items-center justify-content-center fw-bold premag-numbers-itens color-c11">
-                    <p><ngx-animated-counter [params]="paramsObras"></ngx-animated-counter></p>
-                    <p>Obras Concluídas</p>
-                </div>
-            </div>
+            <app-counter></app-counter>
         </div>
     </div>
 </div>
