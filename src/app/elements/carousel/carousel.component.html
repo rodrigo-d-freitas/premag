@@ -1,18 +1,3 @@
-<!-- <div
-  class="item"
-  [style.backgroundImage]="
-    'url(' + imagens[indexImagemAtiva] + ')'
-  "
->
-    
-</div>
-
-<div class="botoes-controle">
-    <button
-      *ngFor="let imagem of imagens; index as i"
-      [class.ativo]="i === indexImagemAtiva"
-      (click)="pararTimer(); ativarImagem(i)"></button>
-  </div> -->
 
   <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'" [animation]="'slide'">
     <mdb-carousel-item *ngFor="let item of slides; let i = index">

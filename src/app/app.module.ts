@@ -9,12 +9,11 @@ import { FooterComponent } from './elements/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FactoryComponent } from './pages/factory/factory.component';
 import { ProductsComponent } from './pages/products/products.component';
-import { ConstructionComponent } from './pages/construction/construction.component';
 import { TecnologyComponent } from './pages/tecnology/tecnology.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { rootRouterConfig } from './app.routes';
-import { CarouselComponent } from './elements/carousel/carousel.component';
-import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { ConstructionModule } from './pages/construction/construction.module';
+import { CarouselModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -24,24 +23,20 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
     HomeComponent,
     FactoryComponent,
     ProductsComponent,
-    ConstructionComponent,
     TecnologyComponent,
-    ContactComponent,
-    CarouselComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    MdbCarouselModule,
     [RouterModule.forRoot(rootRouterConfig),
-    NgxAnimatedCounterModule]
+    NgxAnimatedCounterModule],
+    ConstructionModule,
+    CarouselModule
   ],
   exports: [
     RouterModule
   ],
   providers: [],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

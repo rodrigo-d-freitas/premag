@@ -1,6 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, timer } from 'rxjs';
-import { MdbCarouselComponent } from 'mdb-angular-ui-kit/carousel';
 
 @Component({
   selector: 'app-carousel',
