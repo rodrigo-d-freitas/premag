@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Obras } from 'src/app/models/Obras';
+import { PremagService } from 'src/app/services/premag.service';
 
 @Component({
   selector: 'app-construction',
@@ -8,13 +10,23 @@ import { Component, OnInit } from '@angular/core';
 export class ConstructionComponent implements OnInit {
 
   menucollapse: boolean;
+  public itensObras!: Obras[];
 
-  constructor() {
+  constructor(private premagService: PremagService) {
     this.menucollapse = true;
   }
 
   ngOnInit(): void {
-
+    this.premagService.construirCardObras()
+    .subscribe(
+      obras => {
+        this.itensObras = obras;
+      }, 
+      error => console.log(error)
+    )
   }
+
+  
+
 
 }

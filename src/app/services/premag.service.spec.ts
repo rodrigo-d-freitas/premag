@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CounterService } from './counter.service';
+import { CounterService } from './premag.service';
 
 describe('CounterService', () => {
   let service: CounterService;
