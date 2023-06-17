@@ -22,6 +22,9 @@ $prefix : premag;
 @include layout.padding('.premag-padding-bottom-', 'padding-bottom');
 @include layout.padding('.premag-padding-right-', 'padding-right');
 
+@include layout.width('.premag-', 'width');
+@include layout.height('.premag-', 'height');
+
 body {
     font-family: 'Raleway', sans-serif;
 

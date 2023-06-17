@@ -24,14 +24,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.images = [
-      '../../../assets/images/br-petrobras.svg',
-      '../../../assets/images/embratel-1.svg',
-      '../../../assets/images/light.svg'
-    ]
-
     this.slides = this.chunk(this.cards, 4);
-      
   }
 
   ngOnDestroy(): void {
@@ -56,39 +49,18 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   cards = [
-    {
-      img: '../../../assets/images/dnit.png'
-    },
-    {
-      img: '../../../assets/images/embratel-1.svg'
-    },
-    {
-      img: '../../../assets/images/metro-rio.svg'
-    },
-    {
-      img: '../../../assets/images/light.svg'
-    },
-    {
-      img: '../../../assets/images/br-petrobras.svg'
-    },
-    {
-      img: '../../../assets/images/ufrj.svg'
-    },
-    {
-      img: '../../../assets/images/logo-mage.png'
-    },
-    {
-      img: '../../../assets/images/marica.png'
-    },
-    {
-      img: '../../../assets/images/globo.svg'
-    },
-    {
-      img: '../../../assets/images/fiat.svg'
-    },
-    {
-      img: '../../../assets/images/ccr.svg'
-    },
+    { img: '../../../assets/images/globo.svg' },
+    { img: '../../../assets/images/metro-rio.svg' },
+    { img: '../../../assets/images/ccr.svg' },
+    { img: '../../../assets/images/fiat.svg' },
+    { img: '../../../assets/images/light.svg' },
+    { img: '../../../assets/images/ufrj.svg' },
+    { img: '../../../assets/images/br-petrobras.svg' },
+    { img: '../../../assets/images/logo-mage.png' },
+    { img: '../../../assets/images/marica.png' },
+    { img: '../../../assets/images/dnit.png' },
+    { img: '../../../assets/images/embratel-1.svg' },
+    
   ];
   slides: any = [[]];
   chunk(arr: any, chunkSize: any) {

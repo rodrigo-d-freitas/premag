@@ -1,12 +1,13 @@
-$max: 200;
+$max_espacamento: 200;
+$max_medida: 1140;
 $offset: 4;
-$unit: 'px';
+$unit_px: 'px';
 
 @mixin margin($className, $styleName) {
   $i: 0;
-  @while $i <= $max {
+  @while $i <= $max_espacamento {
     #{$className + $i} { 
-      #{$styleName}: #{$i + $unit};
+      #{$styleName}: #{$i + $unit_px};
     }
     $i: $i + $offset;
   }
@@ -14,9 +15,27 @@ $unit: 'px';
 
 @mixin padding($className, $styleName) {
     $i: 0;
-    @while $i <= $max {
+    @while $i <= $max_espacamento {
       #{$className + $i} { 
-        #{$styleName}: #{$i + $unit};
+        #{$styleName}: #{$i + $unit_px};
+      }
+      $i: $i + $offset;
+    }
+  }
+  @mixin width($className, $styleName) {
+    $i: 0;
+    @while $i <= $max_medida {
+      #{$className + $styleName + '-' + $i} { 
+        #{$styleName}: #{$i + $unit_px};
+      }
+      $i: $i + $offset;
+    }
+  }
+  @mixin height($className, $styleName) {
+    $i: 0;
+    @while $i <= $max_medida {
+      #{$className + $styleName + '-' + $i} { 
+        #{$styleName}: #{$i + $unit_px};
       }
       $i: $i + $offset;
     }
