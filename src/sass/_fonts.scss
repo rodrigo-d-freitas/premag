@@ -1,0 +1,6 @@
+
+@mixin font-family($font){
+    #{'.premag-font-'+ $font}{
+        font-family: #{$font + ', sans-serif'};
+    }
+}

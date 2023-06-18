@@ -1,5 +1,6 @@
 
 @use "sass/_layout.scss" as layout;
+@use "sass/fonts" as font;
 @import url(./sass/_colors.scss);
 
 // Font Awesome
@@ -24,6 +25,9 @@ $prefix : premag;
 
 @include layout.width('.premag-', 'width');
 @include layout.height('.premag-', 'height');
+
+@include font.font-family('Raleway');
+@include font.font-family('Kanit');
 
 body {
     font-family: 'Raleway', sans-serif;
