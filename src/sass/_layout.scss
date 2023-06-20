@@ -12,6 +12,16 @@ $unit_px: 'px';
     $i: $i + $offset;
   }
 }
+@mixin margin-sm($className, $styleName) {
+  $i: 0;
+  
+  @while $i <= $max_espacamento {
+    #{$className + $i} { 
+      #{$styleName}: #{$i + $unit_px};
+    }
+    $i: $i + $offset;
+  }
+}
 
 @mixin padding($className, $styleName) {
     $i: 0;

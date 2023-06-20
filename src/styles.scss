@@ -3,6 +3,12 @@
 @use "sass/fonts" as font;
 @import url(./sass/_colors.scss);
 
+$sm: 576;
+$md: 768;
+$lg: 992;
+$xl: 1200;
+$xxl: 1400;
+
 // Font Awesome
 @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
@@ -13,10 +19,10 @@
 
 $prefix : premag;
 
-@include layout.margin('.premag-margin-top-', 'margin-top');
-@include layout.margin('.premag-margin-left-', 'margin-left');
-@include layout.margin('.premag-margin-bottom-', 'margin-bottom');
-@include layout.margin('.premag-margin-right-', 'margin-right');
+@include layout.margin('.premag-xl-margin-top-', 'margin-top');
+@include layout.margin('.premag-xl-margin-left-', 'margin-left');
+@include layout.margin('.premag-xl-margin-bottom-', 'margin-bottom');
+@include layout.margin('.premag-xl-margin-right-', 'margin-right');
 
 @include layout.padding('.premag-padding-top-', 'padding-top');
 @include layout.padding('.premag-padding-left-', 'padding-left');
@@ -42,22 +48,11 @@ body {
     font-weight: 600;
 }
 
-.obras,
-.contato,
-.products,
-.tecnologia,
-.factory,
-.home {
-    margin-top: 50px;
-}
-
 
 .#{$prefix} {
     &-footer {
         height: 425px;
     }
-    &-primary-font { font-family: 'Raleway', sans-serif; }
-    &-secondary-font { font-family: 'Kanit', sans-serif; }
     &-hero-image {
         width: 100%;
         margin-left: -16px;
@@ -187,7 +182,6 @@ body {
             font-size: 75px;
             transform: rotate(270deg);
             font-weight: 800;
-            margin-top: 190px;
         }
         &-subtitle {
             font-weight: 600;
@@ -227,10 +221,8 @@ body {
             height: 500px;
         }
         &-content {
-            .premag-tecnologia-container {
-                margin-left: -60px;
-            }
-            .premag-page-title { margin-top: 375px; }
+
+            
         }
     }
 
