@@ -1,7 +1,10 @@
 # Premag
+> Esse projeto está sendo utilizado os conceitos de componentização do Angular com módulos separados, lazy loading, módulos de roteamento, viando uma melhor performance e utilização do Angular.
+> 
+> Para os estilos do site, Bootstrap + classes personalizadas criadas no Sass, diminuindo assim o número de classes específicas visando mais os componentes do que as páginas em si.
+> 
 > A PREMAG foi fundada em 1975 objetivando executar obras-de-arte especiais (pontes, viadutos, passarelas etc.) e correntes (bueiros, canais etc.), 
 necessárias aos organismos ligados à construção de rodovias e ferrovias, utilizando concreto protendido e/ou armado, pré-fabricado em usina.
-
 
 ## Versioning
 To keep better organization of releases we follow the [Semantic Versioning 2.0.0](https://semver.org/) guidelines.
