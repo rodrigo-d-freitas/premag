@@ -35,10 +35,6 @@ $prefix : premag;
 @include font.font-family('Raleway');
 @include font.font-family('Kanit');
 
-body {
-    font-family: 'Raleway', sans-serif;
-
-}
 .portfolio div{
     font-size: 64px;
 }
@@ -410,4 +406,13 @@ body {
     .numbers .container > div {
         flex-direction: column !important;
     }
+}
+@include media-breakpoint-between(sm, lg) {
+    @include font.font-size('.caas-sm-', 'font-size', 12);
+}
+@include media-breakpoint-between(lg, xxl) {
+    @include font.font-size('.caas-lg-', 'font-size', 14);
+}
+@include media-breakpoint-only(xxl) {
+    
 }

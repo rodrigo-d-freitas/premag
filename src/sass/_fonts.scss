@@ -4,3 +4,8 @@
         font-family: #{$font + ', sans-serif'};
     }
 }
+@mixin font-size($className, $styleName, $size){
+    #{$className + $styleName + '-' + $size} {
+        #{$styleName}: #{$size + 'px'};
+    }
+}

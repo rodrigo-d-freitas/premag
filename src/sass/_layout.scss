@@ -16,8 +16,53 @@ $unit_px: 'px';
   $i: 0;
   
   @while $i <= $max_espacamento {
-    #{$className + $i} { 
-      #{$styleName}: #{$i + $unit_px};
+    $sm: round(calc(576*$i/1440));
+    #{$className + 'sm-' + $i} { 
+      #{$styleName}: #{$sm + $unit_px};
+    }
+    $i: $i + $offset;
+  }
+}
+@mixin margin-md($className, $styleName) {
+  $i: 0;
+  
+  @while $i <= $max_espacamento {
+    $md: round(calc(768*$i/1440));
+    #{$className + 'md-' + $i} { 
+      #{$styleName}: #{$md + $unit_px};
+    }
+    $i: $i + $offset;
+  }
+}
+@mixin margin-lg($className, $styleName) {
+  $i: 0;
+  
+  @while $i <= $max_espacamento {
+    $lg: round(calc(992*$i/1440));
+    #{$className + 'lg-' + $i} { 
+      #{$styleName}: #{$lg + $unit_px};
+    }
+    $i: $i + $offset;
+  }
+}
+@mixin margin-xl($className, $styleName) {
+  $i: 0;
+  
+  @while $i <= $max_espacamento {
+    $xl: round(calc(1200*$i/1440));
+    #{$className + 'xl-' + $i} { 
+      #{$styleName}: #{$xl + $unit_px};
+    }
+    $i: $i + $offset;
+  }
+}
+@mixin margin-xxl($className, $styleName) {
+  $i: 0;
+  
+  @while $i <= $max_espacamento {
+    $xxl: round(calc(1400*$i/1440));
+    #{$className + 'xxl-' + $i} { 
+      #{$styleName}: #{$xxl + $unit_px};
     }
     $i: $i + $offset;
   }
