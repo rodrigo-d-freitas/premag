@@ -19,15 +19,8 @@ $xxl: 1400;
 
 $prefix : premag;
 
-@include layout.margin('.premag-xl-margin-top-', 'margin-top');
-@include layout.margin('.premag-xl-margin-left-', 'margin-left');
-@include layout.margin('.premag-xl-margin-bottom-', 'margin-bottom');
-@include layout.margin('.premag-xl-margin-right-', 'margin-right');
 
-@include layout.padding('.premag-padding-top-', 'padding-top');
-@include layout.padding('.premag-padding-left-', 'padding-left');
-@include layout.padding('.premag-padding-bottom-', 'padding-bottom');
-@include layout.padding('.premag-padding-right-', 'padding-right');
+
 
 @include layout.width('.premag-', 'width');
 @include layout.height('.premag-', 'height');
@@ -47,7 +40,17 @@ $prefix : premag;
 
 .#{$prefix} {
     &-footer {
-        height: 425px;
+        height: fit-content;
+        padding-top: 40px;
+        padding-bottom: 80px;
+        padding-left: 40px;
+
+        .premag-logo-footer {
+            margin-bottom: 40px;
+        }
+        .premag-links-rapidos {
+            margin-top: 40px;
+        }
     }
     &-hero-image {
         width: 100%;
@@ -217,7 +220,8 @@ $prefix : premag;
             height: 500px;
         }
         &-content {
-
+            padding-left: 40px;
+            padding-right: 40px;
             
         }
     }
@@ -407,12 +411,49 @@ $prefix : premag;
         flex-direction: column !important;
     }
 }
-@include media-breakpoint-between(sm, lg) {
-    @include font.font-size('.caas-sm-', 'font-size', 12);
+@include media-breakpoint-up(sm) {
+    @include layout.margin('.premag-', 'xs', 'margin-top', 0);
+    @include layout.margin('.premag-', 'xs', 'margin-top', 40);
+    @include layout.margin('.premag-', 'xs', 'margin-bottom', 120);
+
+    @include layout.padding('.premag-', 'xs', 'padding-bottom', 120);
+    
+
 }
-@include media-breakpoint-between(lg, xxl) {
+@include media-breakpoint-up(md) {
+    .premag-footer .premag-links-rapidos {
+        margin-top: 132px;
+    }
+}
+@include media-breakpoint-up(lg) {
     @include font.font-size('.caas-lg-', 'font-size', 14);
+    @include layout.margin('.premag-', 'lg', 'margin-top', 0);
+    @include layout.margin('.premag-', 'lg', 'margin-top', 8);
+    @include layout.margin('.premag-', 'lg', 'margin-top', 12);
+    @include layout.margin('.premag-', 'lg', 'margin-top', 16);
+    @include layout.margin('.premag-', 'lg', 'margin-top', 20);
+    @include layout.margin('.premag-', 'lg', 'margin-top', 40);
+    @include layout.margin('.premag-', 'lg', 'margin-top', 80);
+    @include layout.margin('.premag-', 'lg', 'margin-top', 120);
+
+    @include layout.padding('.premag-', 'lg', 'padding-top', 120);
+    
+}
+@include media-breakpoint-only(xl) {
+
 }
 @include media-breakpoint-only(xxl) {
-    
+    @include font.font-size('.caas-lg-', 'font-size', 14);
+    @include layout.margin('.premag-', 'xxl', 'margin-top', 0);
+    @include layout.margin('.premag-', 'xxl', 'margin-top', 8);
+    @include layout.margin('.premag-', 'xxl', 'margin-top', 12);
+    @include layout.margin('.premag-', 'xxl', 'margin-top', 16);
+    @include layout.margin('.premag-', 'xxl', 'margin-top', 20);
+    @include layout.margin('.premag-', 'xxl', 'margin-top', 40);
+    @include layout.margin('.premag-', 'xxl', 'margin-top', 80);
+    @include layout.margin('.premag-', 'xxl', 'margin-top', 120);
+
+    .premag-links-rapido {
+        margin-top: 120px;
+    }
 }

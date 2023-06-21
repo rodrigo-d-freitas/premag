@@ -56,27 +56,21 @@ $unit_px: 'px';
     $i: $i + $offset;
   }
 }
-@mixin margin-xxl($className, $styleName) {
-  $i: 0;
+@mixin margin($className, $screen, $styleName, $size) {
   
-  @while $i <= $max_espacamento {
-    $xxl: round(calc(1400*$i/1440));
-    #{$className + 'xxl-' + $i} { 
-      #{$styleName}: #{$xxl + $unit_px};
+    #{$className + $screen + '-' + $styleName + '-' + $size} { 
+      #{$styleName}: #{$size + $unit_px};
     }
-    $i: $i + $offset;
-  }
+
 }
 
-@mixin padding($className, $styleName) {
-    $i: 0;
-    @while $i <= $max_espacamento {
-      #{$className + $i} { 
-        #{$styleName}: #{$i + $unit_px};
-      }
-      $i: $i + $offset;
-    }
+@mixin padding($className, $screen, $styleName, $size) {
+
+  #{$className + $screen + '-' + $styleName + '-' + $size} { 
+    #{$styleName}: #{$size + $unit_px};
   }
+  
+}
   @mixin width($className, $styleName) {
     $i: 0;
     @while $i <= $max_medida {
