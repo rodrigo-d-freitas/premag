@@ -30,6 +30,7 @@ $prefix : premag;
 
 .portfolio div{
     font-size: 64px;
+    margin: 0;
 }
 
 .is-active{
@@ -41,9 +42,7 @@ $prefix : premag;
 .#{$prefix} {
     &-footer {
         height: fit-content;
-        padding-top: 40px;
-        padding-bottom: 80px;
-        padding-left: 40px;
+        padding: 40px 40px 80px;
 
         .premag-logo-footer {
             margin-bottom: 40px;
@@ -135,14 +134,34 @@ $prefix : premag;
         height: 150px;
 
     }
+    &-counter{
+        padding: 40px;
+    }
     &-banner {
         background: url(assets/images/imagem_capa.png) no-repeat center center;
-        height: 417px;
+        height: fit-content;
         background-size: cover;
     }
 
     &-numbers-itens {
         font-size: 32px;
+    }
+
+    &-home {
+
+        .premag-banner {
+
+            padding: 80px 40px 40px;
+
+            &-text {
+                padding-top: 80px;
+            }
+        }
+
+        &-mission {
+            padding: 40px;
+        }
+
     }
 
     &-fabrica{
@@ -251,14 +270,6 @@ $prefix : premag;
                 flex-direction: column-reverse;
                 display: flex;
                 padding-top: 40px;
-            }
-        }
-
-        &-portfolio{
-            &-item{
-                margin-top: 20px;
-                margin-bottom: 20px;
-                background-color: #EDB31D !important;
             }
         }
 
@@ -396,16 +407,8 @@ $prefix : premag;
 
     .portfolio{
         margin: 0 auto;
-        padding-top: 20px;
-        padding-bottom: 20px;
         background-color: #363636 !important;
 
-        div {
-            font-size: 40px;
-            margin-right: 0;
-            margin-left: 0;
-            
-        }
     }
     .numbers .container > div {
         flex-direction: column !important;
@@ -424,6 +427,9 @@ $prefix : premag;
     .premag-footer .premag-links-rapidos {
         margin-top: 132px;
     }
+    .portfolio div {
+        font-size: 48px;
+    }
 }
 @include media-breakpoint-up(lg) {
     @include font.font-size('.caas-lg-', 'font-size', 14);
@@ -437,6 +443,13 @@ $prefix : premag;
     @include layout.margin('.premag-', 'lg', 'margin-top', 120);
 
     @include layout.padding('.premag-', 'lg', 'padding-top', 120);
+
+    .premag-font-title--position {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
     
 }
 @include media-breakpoint-only(xl) {
