@@ -169,6 +169,55 @@ $prefix : premag;
             background: url(assets/images/capa-fabrica.png) no-repeat center center;
             background-size: cover;
             height: 504px;
+            padding: 80px 40px;
+
+            &-text {
+                margin-bottom: 40px;
+            }
+            
+
+        }
+
+        &-content {
+                
+            padding-right: 40px;
+            padding-left: 40px;
+            padding-bottom: 40px;
+
+            .premag-fabrica-paragrafo {
+                margin-bottom: 40px;
+            }
+            
+            .premag-text { 
+                font-size: 14px; 
+                line-height: 20px;
+                padding-top: 40px;
+                text-align: justify; 
+            }
+            .premag-deco-w,
+            .premag-deco-h {
+                display: none;
+            }
+            .premag-deco-retangulo-text { margin-top: 0; }
+            .premag-fabrica-imagens{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .premag-fabrica-primeira-imagem {
+                    margin-right: 10px;
+                    margin-bottom: 40px;
+                }
+                
+                .premag-fabrica-segunda-imagem {
+                    margin-left: 10px;
+                    margin-bottom: 40px;
+                }
+                .premag-fabrica-terceira-imagem {
+                    
+                }
+            }
         }
         
     }
@@ -198,8 +247,10 @@ $prefix : premag;
     &-page{
         &-title {
             font-size: 75px;
-            transform: rotate(270deg);
+            transform: rotate(0deg);
             font-weight: 800;
+            margin-top: 80px;
+            justify-content: start;
         }
         &-subtitle {
             font-weight: 600;
@@ -291,44 +342,7 @@ $prefix : premag;
             display: flex;
         }
 
-        &-fabrica {
-            &-banner {
-                height: fit-content;
-
-                iframe {
-                    width: 320px !important;
-                    height: 160px !important;
-                }
-            }
-
-            &-content {
-                .premag-page-title { display: none !important; }
-                .premag-text { 
-                    font-size: 14px; 
-                    line-height: 20px;
-                    padding-right: 30px;
-                    text-align: justify; 
-                }
-                .premag-deco-w,
-                .premag-deco-h {
-                    display: none;
-                }
-                .premag-deco-retangulo-text { margin-top: 0; }
-                .premag-fabrica-imagens{
-                    margin-left: 20px;
-                    margin-top: -40px;
-
-                    .premag-fabrica-segunda-imagem {
-                        margin-left: 40px;
-                        margin-top: -60px
-                    }
-                    .premag-fabrica-terceira-imagem {
-                        margin-left: 80px;
-                        margin-top: -60px
-                    }
-                }
-            }
-        }
+        
         &-product {
             &-banner {
                 background: url(assets/images/capa-produtos.png) no-repeat -500px;
