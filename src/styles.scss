@@ -174,10 +174,12 @@ $prefix : premag;
             &-text {
                 margin-bottom: 40px;
             }
-            
-
         }
-
+        &-map {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
         &-content {
                 
             padding-right: 40px;
@@ -189,8 +191,8 @@ $prefix : premag;
             }
             
             .premag-text { 
-                font-size: 14px; 
-                line-height: 20px;
+                font-size: 18px; 
+                line-height: 24px;
                 padding-top: 40px;
                 text-align: justify; 
             }
@@ -434,15 +436,47 @@ $prefix : premag;
     @include layout.margin('.premag-', 'xs', 'margin-bottom', 120);
 
     @include layout.padding('.premag-', 'xs', 'padding-bottom', 120);
+
+    
     
 
 }
 @include media-breakpoint-up(md) {
-    .premag-footer .premag-links-rapidos {
-        margin-top: 132px;
-    }
+    
     .portfolio div {
         font-size: 48px;
+    }
+
+    .premag {
+        &-footer .premag-links-rapidos {
+            margin-top: 132px;
+        }
+
+        
+
+        &-fabrica-content {
+
+            .premag-fabrica-imagens{
+                .premag-fabrica {
+                
+                    &-primeira-imagem {
+                        margin-right: 0;
+                        
+                    }
+                
+                    &-segunda-imagem {
+                        margin-left: 0;
+                    }
+                }
+            }
+            .premag-text {
+                padding-top: 0;
+                text-align: left;
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+        
     }
 }
 @include media-breakpoint-up(lg) {
@@ -463,6 +497,29 @@ $prefix : premag;
         flex-direction: column;
         align-items: start;
         justify-content: center;
+    }
+    .premag {
+        &-page{
+            &-title {
+              
+                transform: rotate(270deg);
+                justify-content: center;
+            }
+            &-subtitle {
+                font-weight: 600;
+            }
+        }
+        &-fabrica-content {
+            padding: 80px 40px 40px;
+
+            .premag-fabrica-imagens{
+                .premag-fabrica {
+                    display: flex; 
+                    flex-direction: row;
+                    justify-content: center;
+                }
+            }
+        }
     }
     
 }
