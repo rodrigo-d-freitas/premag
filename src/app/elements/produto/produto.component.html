@@ -1,0 +1,16 @@
+<div class="row">
+        <div class="col-lg-3 col-xs-12 col-3-l" *ngIf="produtos.lado == 'esquerdo'">
+            <img src="{{produtos.imagem}}" alt="{{produtos.alt}}">
+        </div>
+        <div class="col-lg-9 col-xs-12 background-premag-color-04 premag-color-09 col-9-r">
+            <h2 class="text-uppercase premag-font-36 premag-font-weight-600 premag-secondary-font">{{produtos.titulo}}</h2>
+            <p>{{produtos.descricao}}</p>
+        </div>
+        <div class="col-lg-9 col-xs-12 background-premag-color-04 premag-color-09 col-9-l" *ngIf="produtos.lado == 'direito'">
+            <h2 class="text-uppercase premag-font-36 premag-font-weight-600 premag-secondary-font">{{produtos.titulo}}</h2>
+            <p>{{produtos.descricao}}</p>
+        </div>
+        <div class="col-lg-3 col-xs-12 col-3-r">
+            <img src="{{produtos.imagem}}" alt="{{produtos.alt}}">
+        </div>
+</div>

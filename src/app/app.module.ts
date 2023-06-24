@@ -15,6 +15,7 @@ import { rootRouterConfig } from './app.routes';
 import { ConstructionModule } from './pages/construction/construction.module';
 import { CarouselModule } from 'angular-bootstrap-md';
 import { CounterComponent } from './elements/counter/counter.component';
+import { ProdutoComponent } from './elements/produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CounterComponent } from './elements/counter/counter.component';
     ProductsComponent,
     TecnologyComponent,
     ContactComponent,
-    CounterComponent
+    CounterComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule,

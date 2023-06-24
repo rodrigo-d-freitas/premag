@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Params } from '../models/Params';
 import { Observable } from 'rxjs';
 import { Obras } from '../models/Obras';
+import { Produtos } from '../models/Produtos';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,9 @@ export class PremagService {
 
   construirCardObras(): Observable<Obras[]> {
     return this.http.get<any[]>(this.UrlServiceV1 + "obras");
+  }
+
+  construirListaProdutos(): Observable<Produtos[]> {
+    return this.http.get<Produtos[]>(this.UrlServiceV1 + "produtos");
   }
 }
