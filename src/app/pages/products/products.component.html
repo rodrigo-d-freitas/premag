@@ -5,12 +5,16 @@
             <p class="premag-font-18 premag-color-01 premag-primary-font"></p>    
         </div>
     </div>
-    <div class="premag-product-content background-color-c12 d-flex flex-row align-items-start">
-        <h1 class="premag-page-title color-c11 text-uppercase premag-secondary-font d-flex justify-content-start align-items-center">Produtos e Serviços</h1>
-        <div class="container premag-product-container">
-
-            <div class="container premag-product-item ">
-                <app-produto *ngFor="let produto of itensProdutos" [produtos]="produto"></app-produto>                
+    <div class="premag-product-content background-color-c12">
+        <div class="row">
+            <div class="col-lg-2 premag-product-item-title">
+                <h1 class="premag-page-title color-c11 text-uppercase premag-secondary-font">Produtos e Serviços</h1>
+            </div>
+            
+            <div class="container col-lg-10 premag-product-container">
+                <div class="premag-product-items">
+                    <app-produto *ngFor="let produto of itensProdutos" [produtos]="produto"></app-produto>                
+                </div>
             </div>
         </div>
     </div>

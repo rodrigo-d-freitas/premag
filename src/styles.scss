@@ -232,16 +232,46 @@ $prefix : premag;
         }
 
         &-content {
-            .premag-product-container {
-                margin-left: -310px;
-
+            
+            .premag-page-title {
+                font-size: 45px;
+                padding-left: 40px;
+                padding-right: 40px;
             }
-            .premag-page-title { margin-top: 475px; }
-            .premag-product-item {
-                .col-3 { padding-left: 0; padding-right: 0;}
-                .col-3-l { margin-right: -6px;}
-                .col-9-r { border-top-right-radius: 8px; border-bottom-right-radius: 8px;}
-                .col-9-l { border-top-left-radius: 8px; border-bottom-left-radius: 8px;}
+            .premag-product-items {
+                margin-top: 80px;
+
+                .premag-product-item {
+                    margin-bottom: 40px;
+
+                    h2 {
+                        font-size: 20px;
+                    }
+                    p {
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+
+                    .premag-texto-direita {
+                        padding-top: 40px;
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+
+                    .premag-texto-esquerda {
+                        padding-top: 40px;
+                        padding-left: 40px;
+                        padding-left: 40px;
+                    }
+
+                    .premag-produto-imagem {
+                        padding: 0;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }
@@ -305,7 +335,7 @@ $prefix : premag;
     
 }
 
-@media only screen and (max-width: 576px) {
+/*@media only screen and (max-width: 576px) {
     
     .premag {
 
@@ -349,32 +379,7 @@ $prefix : premag;
             &-banner {
                 background: url(assets/images/capa-produtos.png) no-repeat -500px;
             }
-            &-content { 
-                .premag-page-title { display: none !important; }
-                .premag-product-container { margin-left: 0; }
 
-                .premag-product-item{
-
-                    .col-9-r {
-                        border-top-right-radius: 0;
-                        border-bottom-right-radius: 0;
-                        width: 320px;
-                        margin: -6px auto 0 12px;
-                    }
-
-                    .col-9-l {
-                        border-top-left-radius: 0;
-                        border-bottom-left-radius: 0;
-                        width: 318px;
-                        margin: 0 auto -9px 12px;
-                        z-index: 9;
-                    }
-                    .col-3-l img,
-                    .col-3-r img {
-                        border-radius: 8px;;
-                    }
-                }
-            }
         }
     }
 
@@ -429,7 +434,7 @@ $prefix : premag;
     .numbers .container > div {
         flex-direction: column !important;
     }
-}
+}*/
 @include media-breakpoint-up(sm) {
     @include layout.margin('.premag-', 'xs', 'margin-top', 0);
     @include layout.margin('.premag-', 'xs', 'margin-top', 40);
@@ -476,6 +481,39 @@ $prefix : premag;
                 line-height: 24px;
             }
         }
+
+        &-product {
+            &-content {
+                .premag-product-item-title{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+                .premag-page-title {
+                    font-size: 60px;
+                    
+                }
+                .premag-product-items {
+
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    
+    
+                    .premag-product-item {
+                        
+    
+                        h2 {
+                            font-size: 32px;
+                        }
+                        p {
+                            font-size: 16px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
         
     }
 }
@@ -520,10 +558,36 @@ $prefix : premag;
                 }
             }
         }
+        &-product {
+            &-content {
+                .premag-product-item-title{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+                .premag-page-title {
+                    width: max-content;
+                    margin-top: 370px;
+
+                }
+            }
+        }
     }
     
 }
 @include media-breakpoint-only(xl) {
+
+    .premag {
+        &-product {
+            &-content {
+                .premag-product-items .premag-product-item .premag-produto-imagem img {
+                    
+                }
+            }
+            
+        }
+    }
 
 }
 @include media-breakpoint-only(xxl) {
