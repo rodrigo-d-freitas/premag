@@ -4,8 +4,6 @@ import { RouterModule } from '@angular/router';
 import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter'
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './elements/header/header.component';
-import { FooterComponent } from './elements/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FactoryComponent } from './pages/factory/factory.component';
 import { ProductsComponent } from './pages/products/products.component';
@@ -16,12 +14,12 @@ import { ConstructionModule } from './pages/construction/construction.module';
 import { CarouselModule } from 'angular-bootstrap-md';
 import { CounterComponent } from './elements/counter/counter.component';
 import { ProdutoComponent } from './elements/produto/produto.component';
+import { HeaderModule } from './elements/header/header.module';
+import { FooterModule } from './elements/footer/footer.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     HomeComponent,
     FactoryComponent,
     ProductsComponent,
@@ -35,7 +33,9 @@ import { ProdutoComponent } from './elements/produto/produto.component';
     [RouterModule.forRoot(rootRouterConfig),
     NgxAnimatedCounterModule],
     ConstructionModule,
-    CarouselModule
+    CarouselModule,
+    HeaderModule,
+    FooterModule
   ],
   exports: [
     RouterModule

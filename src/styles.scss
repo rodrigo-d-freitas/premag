@@ -303,7 +303,7 @@ $prefix : premag;
                 .card { height: 675px; }
                 .card-title { font-weight: 700; }
             }
-            .premag-page-title { margin-top: 375px; }
+            .premag-page-title { display: none !important; }
         }
 
     }
