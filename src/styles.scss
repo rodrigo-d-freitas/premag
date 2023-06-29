@@ -298,12 +298,29 @@ $prefix : premag;
 
         &-content {
             .premag-obras-container {
-                margin-left: -190px;
-
-                .card { height: 675px; }
+                .premag-card-obras {
+                    margin-top: 40px;
+                }
+                .card { 
+                    height: fit-content;
+                    margin-bottom: 40px; 
+                }
                 .card-title { font-weight: 700; }
             }
             .premag-page-title { display: none !important; }
+            .premag-page-subtitle {
+                margin-top: 80px;
+                margin-bottom: 40px;
+            }
+            
+        }
+
+        .premag-clientes-content {
+            .premag-clientes-container {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+            
         }
 
     }

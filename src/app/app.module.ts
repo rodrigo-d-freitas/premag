@@ -16,6 +16,7 @@ import { CounterComponent } from './elements/counter/counter.component';
 import { ProdutoComponent } from './elements/produto/produto.component';
 import { HeaderModule } from './elements/header/header.module';
 import { FooterModule } from './elements/footer/footer.module';
+import { ButtonModule } from './elements/button/button.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FooterModule } from './elements/footer/footer.module';
     ConstructionModule,
     CarouselModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    ButtonModule
   ],
   exports: [
     RouterModule
