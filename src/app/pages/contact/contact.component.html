@@ -1,14 +1,15 @@
+<app-header></app-header>
 <div class="contato premag-xl-margin-top-48" id="contato">
     <div class="premag-contato-banner">
         <div class="container">
             <p class="premag-font-18 premag-color-01 premag-primary-font"></p>    
         </div>
     </div>
-    <div class="premag-contato-content background-color-c12 d-flex flex-row align-items-start">
-        <h1 class="premag-page-title color-c11 text-uppercase premag-secondary-font d-flex justify-content-start align-items-center">Contato</h1>
+    <div class="premag-contato-content background-color-c12 d-flex flex-column flex-xl-row align-items-start">
+        <h1 class="premag-page-title color-c11 text-uppercase premag-secondary-font d-flex justify-content-end align-items-center">Contato</h1>
         <div class="container premag-padding-top-80 premag-padding-bottom-200 premag-xl-margin-left-0">
             <div class="row">
-                <div class="col">
+                <div class="col-lg-7">
                     <p class="color-c6">
                         Rod. BR-116/RJ – km 111,5<br>
                         Citrolândia<br>
@@ -19,43 +20,45 @@
                         Tel/Fax:(21) *2633-9933<br>
                         E-mail: <a href="mailto: premag@premag.com.br" class="premag-color-05">premag@premag.com.br</a>
                     </p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.763286892655!2d-43.02101192373152!3d-22.58795502655596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99bad2bf7ed661%3A0xe8cf8da35e7c6264!2sPREMAG%20-%20Sistema%20de%20Constru%C3%A7%C3%B5es%20Ltda.!5e0!3m2!1sen!2sbr!4v1682977210194!5m2!1sen!2sbr" width="480" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="premag-xl-margin-top-80"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.763286892655!2d-43.02101192373152!3d-22.58795502655596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99bad2bf7ed661%3A0xe8cf8da35e7c6264!2sPREMAG%20-%20Sistema%20de%20Constru%C3%A7%C3%B5es%20Ltda.!5e0!3m2!1sen!2sbr!4v1682977210194!5m2!1sen!2sbr" width="480" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="premag-margin-top-80"></iframe>
                 </div>
-                <div class="col">
+                <div class="col-lg-5">
                     <h3 class="color-c6 premag-xl-margin-bottom-80">Fale com a <span class="premag-color-05 premag-font-weight-600">PREMAG</span></h3>
                     <form id="contatoPremag">
-                        <div class="form-group premag-xl-margin-bottom-16">
+                        <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormNome" class="premag-xl-margin-bottom-4 color-c4">Nome</label>
                             <input type="text" class="form-control" id="premagFormNome">
                         </div>
-                        <div class="form-group premag-xl-margin-bottom-16">
+                        <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormEmail" class="premag-xl-margin-bottom-4 color-c4">E-mail</label>
                             <input type="email" class="form-control" id="premagFormEmail">
                         </div>
-                        <div class="form-group premag-xl-margin-bottom-16">
+                        <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormEndereco" class="premag-xl-margin-bottom-4 color-c4">Endereço</label>
                             <input type="text" class="form-control" id="premagFormEndereco">
                         </div>
-                        <div class="form-group premag-xl-margin-bottom-16">
+                        <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormTelefone" class="premag-xl-margin-bottom-4 color-c4">Telefone</label>
                             <input type="tel" class="form-control" id="premagFormTelefone">
                         </div>
-                        <div class="form-group premag-xl-margin-bottom-16">
+                        <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormCelular" class="premag-xl-margin-bottom-4 color-c4">Celular</label>
                             <input type="tel" class="form-control" id="premagFormCelular">
                         </div>
-                        <div class="form-group premag-xl-margin-bottom-16">
+                        <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormAssunto" class="premag-xl-margin-bottom-4 color-c4">Assunto</label>
                             <input type="text" class="form-control" id="premagFormAssunto">
                         </div>
-                        <div class="form-group premag-xl-margin-bottom-16">
+                        <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormMensagem" class="premag-xl-margin-bottom-4 color-c4">Mensagem</label>
                             <textarea class="form-control" id="premagFormMensagem" rows="3"></textarea>
                         </div>
-                        <button type="button" class="btn btn-lg background-premag-color-05 premag-secondary-font text-uppercase premag-font-weight-800 premag-font-24">Enviar</button>
+                        
+                        <app-button label="Enviar" tipo="button"></app-button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<app-footer></app-footer>

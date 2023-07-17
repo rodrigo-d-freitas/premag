@@ -298,17 +298,38 @@ $prefix : premag;
 
         &-content {
             .premag-obras-container {
-                margin-left: -190px;
-
-                .card { height: 675px; }
+                .premag-card-obras {
+                    margin-top: 40px;
+                }
+                .card { 
+                    height: fit-content;
+                    margin-bottom: 40px; 
+                }
                 .card-title { font-weight: 700; }
             }
-            .premag-page-title { margin-top: 375px; }
+            .premag-page-title { display: none !important; }
+            .premag-page-subtitle {
+                margin-top: 80px;
+                margin-bottom: 40px;
+            }
+            
+        }
+
+        .premag-clientes-content {
+            .premag-clientes-container {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+            
         }
 
     }
 
     &-contato {
+        &-content {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
         &-banner {
             background: url(assets/images/capa-fabrica.png) no-repeat center center;
             background-size: cover;
@@ -332,109 +353,39 @@ $prefix : premag;
         height: 100%;
     }
 
-    
+    &-margin{
+        &-bottom {
+            &-16 {
+                margin-bottom: 16px;
+            }
+            &-200 {
+                margin-bottom: 200px;
+            }
+        }
+        &-top {
+            &-80 {
+                margin-top: 80px;
+            }
+        }
+
+    }
+    &-padding{
+        &-bottom {
+            &-16 {
+                padding-bottom: 16px;
+            }
+            &-200 {
+                padding-bottom: 200px;
+            }
+        }
+
+    }
 }
 
-/*@media only screen and (max-width: 576px) {
-    
-    .premag {
+.border-lg-hidden {
+    display: none;
+}
 
-        &-header {
-            .navbar {
-                background-color: #B3B3B3 !important;
-            }
-        }
-
-        &-banner{
-            height: fit-content;
-            padding-bottom: 40px;
-
-            .container .row {
-                flex-direction: column-reverse;
-                display: flex;
-                padding-top: 40px;
-            }
-        }
-
-        &-footer {
-            height: auto;
-        }
-
-        &-links-rapidos {
-            margin-top: 40px;
-            margin-left: 0;
-            margin-bottom: 40px;
-        }
-        &-title-mission {
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
-        &-phone-middle {
-            flex-direction: column-reverse;
-            display: flex;
-        }
-
-        
-        &-product {
-            &-banner {
-                background: url(assets/images/capa-produtos.png) no-repeat -500px;
-            }
-
-        }
-    }
-
-    .obras {
-        .premag-page-title { display: none !important; }
-        .premag-obras-content .premag-obras-container {
-            margin-left: 0;
-
-            .card {
-                height: auto;
-                margin-bottom: 40px;
-            }
-        }
-    }
-    .tecnologia {
-        .premag-page-title, .premag-deco-retangulo-h-100 { display: none !important; }
-        .premag-tecnologia-content .premag-tecnologia-container{
-            margin-left: 0;
-            padding-top: 40px;
-
-            .premag-tecnologia-text {
-                padding: 0 20px;
-            }
-
-            img { 
-                width:100%; 
-                margin-left: 0;
-                margin-top: 40px;
-                margin-bottom: 40px; 
-            }
-        }
-        .premag-no-padding-col {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-
-    .contato{
-        .premag-page-title { display: none !important; }
-
-        iframe {
-            width: 320px !important;
-            height: 160px !important;
-        }
-    }
-
-    .portfolio{
-        margin: 0 auto;
-        background-color: #363636 !important;
-
-    }
-    .numbers .container > div {
-        flex-direction: column !important;
-    }
-}*/
 @include media-breakpoint-up(sm) {
     @include layout.margin('.premag-', 'xs', 'margin-top', 0);
     @include layout.margin('.premag-', 'xs', 'margin-top', 40);
@@ -451,6 +402,8 @@ $prefix : premag;
     .portfolio div {
         font-size: 48px;
     }
+
+    
 
     .premag {
         &-footer .premag-links-rapidos {
@@ -536,17 +489,13 @@ $prefix : premag;
         align-items: start;
         justify-content: center;
     }
+
+    .border-lg-hidden {
+        display: block;
+    }
+
     .premag {
-        &-page{
-            &-title {
-              
-                transform: rotate(270deg);
-                justify-content: center;
-            }
-            &-subtitle {
-                font-weight: 600;
-            }
-        }
+        
         &-fabrica-content {
             padding: 80px 40px 40px;
 
@@ -573,19 +522,80 @@ $prefix : premag;
                 }
             }
         }
+        &-tecnologia {
+            &-content {
+                .premag-product-item-title{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    
+                }
+                .premag-page-title {
+                    width: max-content;
+
+                }
+                
+            }
+
+        }
+        &-hero-image {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 80px;
+            margin-bottom: 80px
+        }
+        &-middle-col{
+            padding: 0;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        &-xl-margin-top-120 {
+            margin-top: 120px;
+        }
+        &-xl-margin-bottom-120 {
+            margin-bottom: 120px;
+        }
     }
     
 }
 @include media-breakpoint-only(xl) {
 
     .premag {
-        &-product {
-            &-content {
-                .premag-product-items .premag-product-item .premag-produto-imagem img {
-                    
-                }
+        &-page{
+            &-title {
+                transform: rotate(270deg);
+                justify-content: center;
+                margin-left: -120px;
             }
-            
+            &-subtitle {
+                font-weight: 600;
+            }
+        }
+        &-tecnologia {
+            &-content {
+                padding-top: 160px;
+            }
+        }
+        &-contato-content {
+            .premag-page-title {
+                margin-top: 200px;
+            }
+        }
+        &-padding-right-80 {
+            padding-right: 80px;
+        }
+        &-xl-margin-top-80 {
+            margin-top: 80px;
+        }
+        &-padding-top-80 {
+            padding-top: 80px;
+        }
+        &-padding-bottom-200 {
+            padding-bottom: 200px;  
+        }
+        &-xl-margin-bottom-16 {
+            margin-bottom: 16px;
         }
     }
 
@@ -601,7 +611,20 @@ $prefix : premag;
     @include layout.margin('.premag-', 'xxl', 'margin-top', 80);
     @include layout.margin('.premag-', 'xxl', 'margin-top', 120);
 
-    .premag-links-rapido {
-        margin-top: 120px;
+    .premag{
+        &-links-rapido {
+            margin-top: 120px;
+        }
+        &-page{
+            &-title {
+                transform: rotate(270deg);
+                justify-content: center;
+                margin-left: -120px;
+            }
+            &-subtitle {
+                font-weight: 600;
+            }
+        }
+        
     }
 }
