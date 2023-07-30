@@ -1,18 +1,18 @@
 <div class="row premag-product-item" *ngIf="produtos.lado == 'esquerdo'">
-    <div class="col-3 premag-produto-imagem">
+    <div class="col-5 premag-produto-imagem">
         <img src="{{produtos.imagem}}" alt="{{produtos.alt}}">
     </div>
-    <div class="col-9 background-premag-color-04 premag-color-09 premag-texto-direita">
+    <div class="col-7 background-premag-color-04 premag-color-09 premag-texto-direita">
         <h2 class="text-uppercase premag-font-36 premag-font-weight-600 premag-secondary-font">{{produtos.titulo}}</h2>
         <p>{{produtos.descricao}}</p>
     </div>
 </div>
 <div class="row premag-product-item" *ngIf="produtos.lado == 'direito'">
-    <div class="col-9 background-premag-color-04 premag-color-09 premag-texto-esquerda">
+    <div class="col-7 background-premag-color-04 premag-color-09 premag-texto-esquerda">
         <h2 class="text-uppercase premag-font-36 premag-font-weight-600 premag-secondary-font">{{produtos.titulo}}</h2>
         <p>{{produtos.descricao}}</p>
     </div>
-    <div class="col-3 premag-produto-imagem">
+    <div class="col-5 premag-produto-imagem">
         <img src="{{produtos.imagem}}" alt="{{produtos.alt}}">
     </div>
 </div>

@@ -7,23 +7,13 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
-  menucollapse: boolean;
+  
 
-  constructor() {
-    this.menucollapse = true;
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-    
-    
-  }
+  ngOnInit(): void {}
 
-  ngOnDestroy(): void {
+  ngOnDestroy(): void {}
 
-  }
-
-  collapse() {
-    this.menucollapse = !this.menucollapse;
-  }
-
+  
 }

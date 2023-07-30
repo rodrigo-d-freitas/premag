@@ -38,6 +38,43 @@ $prefix : premag;
     font-weight: 600;
 }
 
+.slick-slider {
+    width: 88%;
+    margin: auto;
+    background: rgb(14, 13, 13);
+}
+  
+body .slick-prev, 
+body .slick-next {
+    height: 45px;
+    width: 40px;
+    background: grey !important;
+    z-index: 100;
+}
+.slick-list {
+    background: #fff;
+}
+.carousel {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+body .slick-prev, body .slick-next {
+    background: transparent !important;
+}
+.slick-prev:before, .slick-next:before {
+    color: #FEC32B !important;
+    font-size: 30px !important;
+}
+.slide {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    img {
+        height: 200px;
+    }
+    
+}
 
 .#{$prefix} {
     &-footer {
@@ -147,6 +184,8 @@ $prefix : premag;
         font-size: 32px;
     }
 
+    
+
     &-home {
 
         .premag-banner {
@@ -253,9 +292,9 @@ $prefix : premag;
                     }
 
                     .premag-texto-direita {
-                        padding-top: 40px;
-                        padding-left: 40px;
-                        padding-right: 40px;
+                        padding-top: 20px;
+                        padding-left: 20px;
+                        padding-right: 20px;
                     }
 
                     .premag-texto-esquerda {
@@ -266,6 +305,9 @@ $prefix : premag;
 
                     .premag-produto-imagem {
                         padding: 0;
+                        align-items: stretch;
+                        justify-content: flex-start;
+                        display: flex;
 
                         img {
                             width: 100%;
@@ -367,6 +409,11 @@ $prefix : premag;
                 margin-top: 80px;
             }
         }
+        &-right {
+            &-0 {
+                margin-right: 0;
+            }
+        }
 
     }
     &-padding{
@@ -374,16 +421,33 @@ $prefix : premag;
             &-16 {
                 padding-bottom: 16px;
             }
+            &-80 {
+                padding-bottom: 80px;
+            }
             &-200 {
                 padding-bottom: 200px;
             }
         }
-
+        &-top {
+            &-40 {
+                padding-top: 40px;
+            }
+            &-80 {
+                padding-top: 80px;
+            }
+        }
     }
 }
 
 .border-lg-hidden {
     display: none;
+}
+
+.slick-slide[data-slick-index='4']{
+    img{
+        width: 280px;
+        margin: 0 auto;
+    }
 }
 
 @include media-breakpoint-up(sm) {
@@ -492,6 +556,12 @@ $prefix : premag;
 
     .border-lg-hidden {
         display: block;
+    }
+
+    .slick-slide[data-slick-index='4']{
+        img{
+            width: 230px;
+        }
     }
 
     .premag {

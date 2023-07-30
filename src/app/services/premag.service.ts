@@ -13,7 +13,15 @@ export class PremagService {
 
   constructor(private http: HttpClient) {}
 
-  protected UrlServiceV1: string = 'http://localhost:3000/';
+  //protected UrlServiceV1: string = 'http://localhost:3000/';
+  /** Produção 
+   * 
+   * protected UrlServiceV1: string = 'https://neojobs.com.br/';
+   * 
+  */
+
+  protected UrlServiceV1: string = 'https://neojobs.com.br/';
+  //protected UrlServiceV1: string = 'http://localhost:3000/';
 
   construirContador(): Observable<Params[]> {
     return this.http.get<Params[]>(this.UrlServiceV1 + "counter");
@@ -25,5 +33,10 @@ export class PremagService {
 
   construirListaProdutos(): Observable<Produtos[]> {
     return this.http.get<Produtos[]>(this.UrlServiceV1 + "produtos");
+  }
+
+  getPremagJson(): Observable<any> {
+    const url = 'https://neojobs.com.br/premag.json';
+    return this.http.get(url);
   }
 }

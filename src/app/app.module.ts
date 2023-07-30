@@ -4,8 +4,6 @@ import { RouterModule } from '@angular/router';
 import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter'
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './elements/header/header.component';
-import { FooterComponent } from './elements/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FactoryComponent } from './pages/factory/factory.component';
 import { ProductsComponent } from './pages/products/products.component';
@@ -17,32 +15,41 @@ import { CarouselModule } from 'angular-bootstrap-md';
 import { CounterComponent } from './elements/counter/counter.component';
 import { ProdutoComponent } from './elements/produto/produto.component';
 import { ButtonModule } from './elements/button/button.module';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { FooterModule } from './elements/footer/footer.module';
+import { headerModule } from './elements/header/header.module';
+import { ArrayFixPipe } from './pipes/array-fix.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     HomeComponent,
     FactoryComponent,
     ProductsComponent,
     TecnologyComponent,
     ContactComponent,
     CounterComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    ArrayFixPipe
   ],
   imports: [
     BrowserModule,
     [RouterModule.forRoot(rootRouterConfig),
     NgxAnimatedCounterModule],
-    ConstructionModule,
     CarouselModule,
-    ButtonModule
+    ButtonModule,
+    SlickCarouselModule,
+    FooterModule,
+    headerModule,
+    HttpClientModule
   ],
   exports: [
     RouterModule
   ],
-  providers: [],
+  providers: [
+    ArrayFixPipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
