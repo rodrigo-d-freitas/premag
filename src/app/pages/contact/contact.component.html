@@ -20,41 +20,45 @@
                         Tel/Fax:(21) *2633-9933<br>
                         E-mail: <a href="mailto: premag@premag.com.br" class="premag-color-05">premag@premag.com.br</a>
                     </p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.763286892655!2d-43.02101192373152!3d-22.58795502655596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99bad2bf7ed661%3A0xe8cf8da35e7c6264!2sPREMAG%20-%20Sistema%20de%20Constru%C3%A7%C3%B5es%20Ltda.!5e0!3m2!1sen!2sbr!4v1682977210194!5m2!1sen!2sbr" width="480" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="premag-margin-top-80"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.763286892655!2d-43.02101192373152!3d-22.58795502655596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99bad2bf7ed661%3A0xe8cf8da35e7c6264!2sPREMAG%20-%20Sistema%20de%20Constru%C3%A7%C3%B5es%20Ltda.!5e0!3m2!1sen!2sbr!4v1682977210194!5m2!1sen!2sbr" width="480" height="350" style="border:0; width: 80% !important;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="premag-margin-top-80"></iframe>
                 </div>
                 <div class="col-lg-5">
                     <h3 class="color-c6 premag-xl-margin-bottom-80">Fale com a <span class="premag-color-05 premag-font-weight-600">PREMAG</span></h3>
-                    <form id="contatoPremag">
+                    <form novalidate [formGroup]="contactForm" (ngSubmit)="adicionarContato()" id="contatoPremag">
                         <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormNome" class="premag-xl-margin-bottom-4 color-c4">Nome</label>
-                            <input type="text" class="form-control" id="premagFormNome">
+                            <input type="text" class="form-control" id="premagFormNome" formControlName="premagFormNome">
+                            <span class="text-danger" *ngIf="contactForm.get('premagFormNome')?.errors && (contactForm.get('premagFormNome')?.dirty || contactForm.get('premagFormNome')?.touched)">
+                                <p>Preencha o campo nome</p>
+                            </span>
                         </div>
                         <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormEmail" class="premag-xl-margin-bottom-4 color-c4">E-mail</label>
-                            <input type="email" class="form-control" id="premagFormEmail">
+                            <input type="email" class="form-control" id="premagFormEmail" formControlName="premagFormEmail">
                         </div>
                         <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormEndereco" class="premag-xl-margin-bottom-4 color-c4">Endereço</label>
-                            <input type="text" class="form-control" id="premagFormEndereco">
+                            <input type="text" class="form-control" id="premagFormEndereco" formControlName="premagFormEndereco">
                         </div>
                         <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormTelefone" class="premag-xl-margin-bottom-4 color-c4">Telefone</label>
-                            <input type="tel" class="form-control" id="premagFormTelefone">
+                            <input type="tel" class="form-control" id="premagFormTelefone" formControlName="premagFormTelefone">
                         </div>
                         <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormCelular" class="premag-xl-margin-bottom-4 color-c4">Celular</label>
-                            <input type="tel" class="form-control" id="premagFormCelular">
+                            <input type="tel" class="form-control" id="premagFormCelular" formControlName="premagFormCelular">
                         </div>
                         <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormAssunto" class="premag-xl-margin-bottom-4 color-c4">Assunto</label>
-                            <input type="text" class="form-control" id="premagFormAssunto">
+                            <input type="text" class="form-control" id="premagFormAssunto" formControlName="premagFormAssunto">
                         </div>
                         <div class="form-group premag-margin-bottom-16">
                             <label for="premagFormMensagem" class="premag-xl-margin-bottom-4 color-c4">Mensagem</label>
-                            <textarea class="form-control" id="premagFormMensagem" rows="3"></textarea>
+                            <textarea class="form-control" id="premagFormMensagem" rows="3" formControlName="premagFormMensagem"></textarea>
                         </div>
                         
-                        <app-button label="Enviar" tipo="button"></app-button>
+                        <button type="submit" class="btn btn-lg background-premag-color-05 premag-secondary-font text-uppercase premag-font-weight-800 premag-font-24">Enviar</button>
+
                     </form>
                 </div>
             </div>

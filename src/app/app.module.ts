@@ -20,6 +20,7 @@ import { FooterModule } from './elements/footer/footer.module';
 import { headerModule } from './elements/header/header.module';
 import { ArrayFixPipe } from './pipes/array-fix.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
     SlickCarouselModule,
     FooterModule,
     headerModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     RouterModule

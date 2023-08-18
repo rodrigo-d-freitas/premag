@@ -150,7 +150,7 @@ export class ConstructionComponent implements OnInit {
   slideConfig = { 
     slidesToShow: 4, 
     slidesToScroll: 4, 
-    autoplay: false, 
+    autoplay: true, 
     mobileFirst: true,
     responsive: [{
       breakpoint: 430,
