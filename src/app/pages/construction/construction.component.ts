@@ -34,8 +34,8 @@ export class ConstructionComponent implements OnInit {
   },
   {
       imagem : "../../../assets/images/passarela-km-181.jpg",
-      alt : "Passarela do KM 181",
-      titulo : "Passarela do KM 181",
+      alt : "Passarela em Guararema/SP",
+      titulo : "Passarela em Guararema/SP",
       local : " Passarela em Guararema/SP",
       ano: "2018",
       comprimento : "275,64 m",
@@ -44,8 +44,8 @@ export class ConstructionComponent implements OnInit {
   },
   {
       imagem : "../../../assets/images/montagem-barra-mansa.jpg",
-      alt : "Montagem Barra Mansa",
-      titulo : "Montagem Barra Mansa",
+      alt : "Ponte Barra Mansa",
+      titulo : "Ponte Barra Mansa",
       local : "  Barra Mansa/RJ",
       ano: "2021",
       comprimento : "",
@@ -64,9 +64,9 @@ export class ConstructionComponent implements OnInit {
   },
   {
       imagem : "../../../assets/images/marques-parana.jpg",
-      alt : "Marquês Paraná - Niteroi",
-      titulo : "Marquês Paraná - Niteroi",
-      local : " Avenida Marquês de Paraná - Niteroi/RJ",
+      alt : "Inclusão da Obra da TransOlímpica",
+      titulo : "Inclusão da Obra da TransOlímpica",
+      local : "TransOlímpica",
       ano: "2019",
       comprimento : "",
       largura : "",
@@ -114,9 +114,9 @@ export class ConstructionComponent implements OnInit {
   },
   {
       imagem : "../../../assets/images/corisco-paraty.jpg",
-      alt : "Corisco - Paraty",
-      titulo : "Corisco - Paraty",
-      local : "Ponte da Estrada do Corisco",
+      alt : "Mato Alto",
+      titulo : "Mato Alto",
+      local : "Mato Alto",
       ano: "2020",
       comprimento : "",
       largura : "",
@@ -141,11 +141,8 @@ export class ConstructionComponent implements OnInit {
   }
 
   slides = [
-    { img: '../../../assets/images/fiat.svg' },
-    { img: '../../../assets/images/embratel-1.svg' },
     { img: '../../../assets/images/br-petrobras.svg' },
     { img: '../../../assets/images/ccr.svg' },
-    { img: '../../../assets/images/globo.svg' },
   ];
   slideConfig = { 
     slidesToShow: 4, 

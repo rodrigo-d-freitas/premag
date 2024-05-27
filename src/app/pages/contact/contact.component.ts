@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
   contactForm! : FormGroup;
   contact! : Contacts;
   formResult : string = '';
-  sendgridApiKey = environment.sendgridApiKey;
+  sendgridApiKey = (environment as any).sendgridApiKey;
 
   constructor(private fb: FormBuilder, private http: HttpClient) {}
 
@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
       this.contact = Object.assign({}, this.contact, this.contactForm.value);
       this.formResult = JSON.stringify(this.contactForm.value);
 
-      const sendgridApiKey = environment.sendgridApiKey;
+      const sendgridApiKey = (environment as any).sendgridApiKey;
       const sendgridUrl = 'https://api.sendgrid.com/v3/mail/send';
 
       const data = {

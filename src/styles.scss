@@ -282,6 +282,7 @@ body .slick-prev, body .slick-next {
 
                 .premag-product-item {
                     margin-bottom: 40px;
+                    height: 340px;
 
                     h2 {
                         font-size: 20px;
@@ -308,6 +309,7 @@ body .slick-prev, body .slick-next {
                         align-items: stretch;
                         justify-content: flex-start;
                         display: flex;
+                        height: 340px;
 
                         img {
                             width: 100%;
@@ -344,8 +346,12 @@ body .slick-prev, body .slick-next {
                     margin-top: 40px;
                 }
                 .card { 
-                    height: fit-content;
+                    height: 478px;
                     margin-bottom: 40px; 
+
+                    .card-img, .card-img-top{
+                        height: 200px;
+                    }
                 }
                 .card-title { font-weight: 700; }
             }
