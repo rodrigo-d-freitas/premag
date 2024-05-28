@@ -121,6 +121,16 @@ export class ConstructionComponent implements OnInit {
       comprimento : "",
       largura : "",
       cliente : "Prefeitura Municipal de Paraty"
+  },
+  {
+      imagem : "../../../assets/images/foto-che-guevara.jpg",
+      alt : "Passarela sobre RJ 106 altura Km 23 ",
+      titulo : "Passarela sobre RJ 106 altura Km 23 - Acesso ao Hospital Dr. Ernesto Che Guevara ",
+      local : "São José do Imbassaí - Maricá/RJ",
+      ano: "",
+      comprimento : "",
+      largura : "",
+      cliente : "SOMAR - Prefeitura Municipal de Maricá"
   }
   ]
 
