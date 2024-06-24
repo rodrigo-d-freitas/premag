@@ -91,6 +91,16 @@ body .slick-prev, body .slick-next {
     &-hero-image {
         width: 100%;
         margin-left: -16px;
+
+        &-banner {
+            height: 265px;
+            overflow: hidden;
+            margin: 64px 0;
+
+            .premag-hero-image{
+                margin-top: -45px;
+            }
+        }
     }
     &-ul {
         list-style: none;
@@ -139,6 +149,7 @@ body .slick-prev, body .slick-next {
         &-3x { height: 12px; }
         &-4x { height: 16px; }
         &-5x { height: 20px; }
+
     }
     &-font-title { 
         font-family: 'Kanit', sans-serif;
@@ -183,8 +194,6 @@ body .slick-prev, body .slick-next {
     &-numbers-itens {
         font-size: 32px;
     }
-
-    
 
     &-home {
 
@@ -377,6 +386,16 @@ body .slick-prev, body .slick-next {
         &-content {
             padding-left: 40px;
             padding-right: 40px;
+
+            .premag-list-icon{
+                list-style: none;
+                display: flex;
+                padding-left: 0;
+
+                li{
+                    margin-right: 8px;
+                }
+            }
         }
         &-banner {
             background: url(assets/images/capa-fabrica.png) no-repeat center center;
@@ -393,8 +412,18 @@ body .slick-prev, body .slick-next {
         &-content {
             padding-left: 40px;
             padding-right: 40px;
+
+            .premag-foto-right{
+                overflow: hidden;
+                height: 435px;
+
+                img {
+                    width: 75%;
+                }
+            }
             
         }
+        
     }
 
     &-carousel {
@@ -655,6 +684,8 @@ body .slick-prev, body .slick-next {
         &-tecnologia {
             &-content {
                 padding: 160px 40px 40px;
+
+                
             }
         }
         &-contato-content {
